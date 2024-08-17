@@ -1,0 +1,234 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Roboto, sans-serif;
+}
+
+body{
+    background: #000;
+    height: 1000px;
+}
+
+body::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0.5;
+    width: 100%;
+    height: 100%;
+    background: url("images/netflix-background.jpg");
+    background-position: center;
+}
+
+nav{
+    position: fixed;
+    padding: 24px 30px;
+    z-index: 1;
+}
+
+nav a img{
+    width: 90px;
+}
+
+.form-container{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    border-radius: 4px;
+    padding: 70px;
+    width: 450px;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.75);
+    margin-top: 60px;
+}
+
+.form-container h2{
+    color: #fff;
+    font-size: 2rem;
+}
+
+.form-container form{
+    margin: 25px 0 65px;
+}
+
+form .form-main{
+    height: 50px;
+    position: relative;
+    margin-bottom: 16px;
+}
+
+.form-main input{
+    height: 100%;
+    width: 100%;
+    background: rgba(135, 133, 133, 0.05);
+    border: 1px solid #767575;
+    outline: none;
+    border-radius: 4px;
+}
+
+.form-main input:is(:focus, :valid){
+    background: #444;
+    opacity: 0.8;
+    padding: 16px 20px 0;
+}
+
+.form-main label{
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1rem;
+    pointer-events: none;
+    color: #a8a5a5;
+    transition: all 0.1s ease;
+}
+
+.form-main input:is(:focus, :valid)~label{
+    font-size: 0.75rem;
+    transform: translateY(-130%);
+}
+
+.sign-btn{
+    width: 100%;
+    padding: 12px 0;
+    font-size: 1rem;
+    background: #e50914;
+    color: #fff;
+    font-weight: 500;
+    border-radius: 4px;
+    border: none;
+    outline: none;
+    margin: 0;
+    cursor: pointer;
+    transition: 0.1s ease;
+}
+
+.sign-btn:hover{
+    background-color: #c40812;
+}
+
+.use-code-btn{
+    width: 100%;
+    padding: 12px 0;
+    font-size: 1rem;
+    background: rgba(171, 166, 166, 0.3);
+    color: #fff;
+    font-weight: 500;
+    border-radius: 4px;
+    border: none;
+    outline: none;
+    margin:  0;
+    cursor: pointer;
+    transition: 0.1s ease;
+}
+
+.use-code-btn:hover{
+    background: rgba(171, 166, 166, 0.2);
+}
+
+.case{
+    display: flex;
+    justify-content: center;
+    margin: 15px;
+}
+
+form p{
+    color: #aaa6a6;
+}
+
+.form-container a{
+    text-decoration: none;
+}
+
+.form-container a:hover{
+    text-decoration: underline;
+}
+
+.form-container:where(label, p, small, a){
+    color: #d0cbcb;
+}
+
+
+.forgot-password{
+    display: flex;
+    justify-content: center;
+    color: white;
+    padding-top: 15px;
+    padding-bottom: 23px;
+}
+
+.forgot-password p{
+    color: white;
+    font-weight: 300;
+}
+
+form .remember-me{
+    display: flex;
+    margin-bottom: 17px;
+}
+
+form .remember-me:hover{
+    accent-color: white;
+}
+
+form .remember-me input{
+    width: 25px;
+    margin-right: 10px;
+    accent-color: #f9f7f7;
+}
+
+.textR{
+    color: white;
+    font-weight: 300;
+
+}
+
+form .form-help:where(label, a){
+    font-size: 0.9rem;
+}
+
+.new-2-net{
+    color: #b3b3b3;
+    font-size: 300;
+}
+
+.form-container p a{
+    color: #fff;
+}
+
+.form-container small{
+    display: block;
+    color: #b3b3b3;
+}
+
+.form-container small a{
+    color: #0071eb;
+}
+
+@media (max-width: 700px){
+    body::before{
+        display: none;
+    }
+
+    nav, .form-container{
+        padding: 20px;
+    }
+
+    nav a img{
+        width: 140px;
+    }
+
+    .form-container{
+        width: 100%;
+        top: 43%;
+    }
+
+    .form-container form{
+        margin: 25px 0 40px;
+    }
+}
+
